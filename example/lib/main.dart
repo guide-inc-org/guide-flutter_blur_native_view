@@ -1,7 +1,6 @@
 import 'dart:async';
 
-import 'package:blur_native_view/blur_native_niew.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:blur_native_view/blur_native_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
