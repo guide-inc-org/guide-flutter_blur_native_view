@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
@@ -16,10 +16,11 @@ class BlurNativeView extends StatelessWidget {
       alignment: Alignment.center,
       fit: StackFit.passthrough,
       children: <Widget>[
-        const Positioned.fill(
+        Positioned.fill(
           child: UiKitView(
             viewType: 'plugins.flutter.dev/blur_native',
-            creationParamsCodec: StandardMessageCodec(),
+            creationParamsCodec: const StandardMessageCodec(),
+            hitTestBehavior: PlatformViewHitTestBehavior.transparent,
           ),
         ),
         child ?? const SizedBox.shrink(),
